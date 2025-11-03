@@ -6,11 +6,11 @@ app:
   initial_cash: 100000.0
 
 llm:
-  api_key: sk-8d8e330eadec4ab193f8e9e403ee9a1b
+  api_key: 
   temperature: 0.2
 
 data:
-  tushare_token: 4cd88695908a7329257743497b596a3955f8bad17eb232c9e15c18a9
+  tushare_token: 
   frequency: daily
   cache_days: 2
 
