@@ -1,0 +1,164 @@
+:root {
+    color-scheme: light dark;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    padding: 24px 32px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border-bottom: 1px solid #1f2937;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+}
+
+.header p {
+    margin: 0;
+    max-width: 640px;
+    color: #94a3b8;
+}
+
+.chat-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    flex: 1;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-right: 8px;
+}
+
+.message {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #1e293b;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+.message.user .avatar {
+    color: #facc15;
+}
+
+.bubble {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 16px;
+    max-width: 720px;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.3);
+}
+
+.message.user .bubble {
+    background: #334155;
+}
+
+.bubble pre {
+    background: #0f172a;
+    padding: 12px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 8px 0 0;
+}
+
+.bubble h4 {
+    margin: 0 0 8px;
+}
+
+.chat-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background: #111827;
+    border-radius: 24px;
+    border: 1px solid #1f2937;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.field.range {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+input,
+textarea {
+    background: #0f172a;
+    color: inherit;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1rem;
+    resize: none;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    appearance: none;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.content ul {
+    margin: 8px 0;
+    padding-left: 18px;
+}
+
+.content pre {
+    white-space: pre-wrap;
+}

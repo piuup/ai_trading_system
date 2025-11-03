@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trading Copilot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1>AI Trading Copilot</h1>
+            <p>Describe your trading idea and let the assistant design, backtest, and explain it.</p>
+        </header>
+        <main class="chat-panel">
+            <section id="messages" class="messages"></section>
+            <form id="chat-form" class="chat-form">
+                <div class="field">
+                    <label for="symbol">Symbol</label>
+                    <input id="symbol" name="symbol" placeholder="510300.SH" required />
+                </div>
+                <div class="field range">
+                    <div>
+                        <label for="start">Start</label>
+                        <input id="start" name="start" type="date" required />
+                    </div>
+                    <div>
+                        <label for="end">End</label>
+                        <input id="end" name="end" type="date" required />
+                    </div>
+                </div>
+                <textarea id="prompt" name="prompt" placeholder="Describe your strategy idea..." required></textarea>
+                <button type="submit" id="send-btn">Send</button>
+            </form>
+        </main>
+    </div>
+
+    <template id="user-message-template">
+        <div class="message user">
+            <div class="avatar">You</div>
+            <div class="bubble">
+                <p class="content"></p>
+            </div>
+        </div>
+    </template>
+
+    <template id="assistant-message-template">
+        <div class="message assistant">
+            <div class="avatar">AI</div>
+            <div class="bubble">
+                <div class="content"></div>
+            </div>
+        </div>
+    </template>
+
+    <script src="/static/scripts.js" defer></script>
+</body>
+</html>

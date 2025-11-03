@@ -1,0 +1,22 @@
+app:
+  deepseek_api_base: https://api.deepseek.com/v1
+  model: deepseek-chat
+  default_symbol: "000001.SZ"
+  default_years: 4  # default lookback window for the UI
+  initial_cash: 100000.0
+
+llm:
+  api_key: sk-8d8e330eadec4ab193f8e9e403ee9a1b
+  temperature: 0.2
+
+data:
+  tushare_token: 4cd88695908a7329257743497b596a3955f8bad17eb232c9e15c18a9
+  frequency: daily
+  cache_days: 2
+
+backtest:
+  commission: 0.001
+  default_order_pct: 0.1
+  risk_per_trade: 0.02
+  stop_loss_percent: 0.02
+  benchmark: "000300.SH"
